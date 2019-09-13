@@ -29,7 +29,7 @@ matrix:
             - cmake
         coverity_scan:
           project:
-            name: "ModernCMake"
+            name: "simonjung1603/ModernCMake"
             description: "A CMake example"
           notification_email: simonjung1603@gmail.com
           build_command_prepend: "cov-configure --comptype gcc --compiler g++-5 --template && cmake -DCMAKE_CXX_COMPILER=g++-5 -DGEN_DOCS=OFF ."
