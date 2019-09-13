@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(Project-Name)
+project(ModernCMake)
 
-set(Project-Name_VERSION_MAJOR 0)
-set(Project-Name_VERSION_MINOR 1)
-set(Project-Name_VERSION_PATCH 0)
-set(Project-Name_VERSION "${Project-Name_VERSION_MAJOR}.${Project-Name_VERSION_MINOR}.${Project-Name_VERSION_PATCH}")
+set(ModernCMake_VERSION_MAJOR 0)
+set(ModernCMake_VERSION_MINOR 1)
+set(ModernCMake_VERSION_PATCH 0)
+set(ModernCMake_VERSION "${Project-Name_VERSION_MAJOR}.${Project-Name_VERSION_MINOR}.${Project-Name_VERSION_PATCH}")
 
-set(PROJ_NAME "\"Project Name\"") # PROJECT_NAME is a predefined variable
-set(PROJECT_DESCRIPTION "\"A cross-platform C++14 project template\"")
+set(PROJ_NAME "\"Modern CMake\"") # PROJECT_NAME is a predefined variable
+set(PROJECT_DESCRIPTION "\"A CMake example\"")
 
 configure_file(include/project-abbr/config.hpp.in
     ${CMAKE_BINARY_DIR}/include/project-abbr/config.hpp
