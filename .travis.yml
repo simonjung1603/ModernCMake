@@ -85,6 +85,16 @@ matrix:
       env:
         - MATRIX_EVAL="COMPILER=clang++ && BUILD_TYPE=Release"
       if: branch != coverity_scan
+    - os: windows
+      compiler: msvc
+      env:
+        - MATRIX_EVAL="COMPILER=msvc && BUILD_TYPE=Release"
+      if: branch != coverity_scan
+    - os: windows
+      compiler: msvc
+      env:
+        - MATRIX_EVAL="COMPILER=msvc && BUILD_TYPE=Debug"
+      if: branch != coverity_scan
 
 before_install:
   - eval "${MATRIX_EVAL}"
