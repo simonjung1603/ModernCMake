@@ -104,6 +104,6 @@ before_script:
   - cmake -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_COMPILER=$COMPILER -DBUILD_TESTS=ON -DGEN_DOCS=OFF ..
 
 script:
-  - cmake --build . -- -j2 # Build the code
+  - cmake --build . # Build the code
   - ctest --output-on-failure
   - sudo cmake --build . --target install # Install the necessary files
