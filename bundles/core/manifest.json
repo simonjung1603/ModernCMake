@@ -1,0 +1,6 @@
+{
+  "bundle.symbolic_name" : "core",
+  "bundle.activator" : true,
+  "bundle.name" : "Midi Buddy Core Bundle",
+  "bundle.description" : "The bundle containing all core microservices"
+}
