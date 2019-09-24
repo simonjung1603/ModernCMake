@@ -25,7 +25,7 @@ add_dependencies(${proj} cppmicroservices)
 
 #build MidiBuddy
 set(mb_build_cmd ${CMAKE_COMMAND} --build ${CMAKE_CURRENT_BINARY_DIR}/MidiBuddyBuild --config ${CMAKE_CFG_INTDIR})
-add_custom_target(MidiBuddyBuild
+add_custom_target(MidiBuddyBuild ALL
   COMMAND ${mb_build_cmd}
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/MidiBuddyBuild
   DEPENDS MidiBuddyConfigure
