@@ -106,4 +106,4 @@ before_script:
 script:
   - cmake --build . # Build the code
   - ctest --output-on-failure
-  - sudo cmake --build . --target install # Install the necessary files
+  - cmake --build . --target install # Install the necessary files
