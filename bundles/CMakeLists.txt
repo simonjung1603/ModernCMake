@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Options
-option(BUILD_TESTS "Build test executable" OFF)
+option(BUILD_TESTS "Build test executable" ON)
 option(GEN_DOCS "Generate documentation" OFF)
 option(ENABLE_COVERAGE "Enable code coverage" OFF)
 
@@ -73,13 +73,9 @@ endforeach()
 target_include_directories(${PROJECT_NAME} PRIVATE core)
 target_link_libraries(${PROJECT_NAME} PRIVATE core)
 
-message("Build testing is turned...")
 if (BUILD_TESTS)
-	message("ON!!!")
     include(CTest)
     enable_testing()
-else()
-	message("OFF")
 endif ()
 
 if (GEN_DOCS)
