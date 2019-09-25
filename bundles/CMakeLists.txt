@@ -84,7 +84,7 @@ if (GEN_DOCS)
 endif (GEN_DOCS)
 
 # Install the built library and executable into the appropriate directory
-install(TARGETS ${PROJECT_NAME} DESTINATION bin)
+install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_BINARY_DIR}/bin)
 
 # Install the project header files into the appropriate directory
 # install(DIRECTORY include/ DESTINATION include PATTERN "config.hpp.in" EXCLUDE) # Install our main header files

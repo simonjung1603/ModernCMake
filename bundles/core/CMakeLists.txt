@@ -39,7 +39,7 @@ target_link_libraries(${_bundle_name} CppMicroServices)
 target_include_directories(${_bundle_name} PRIVATE CppMicroServices)
 
 install(TARGETS ${_bundle_name}
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
+    ARCHIVE DESTINATION ${CMAKE_BINARY_DIR}/lib
+    LIBRARY DESTINATION ${CMAKE_BINARY_DIR}/lib
+    RUNTIME DESTINATION ${CMAKE_BINARY_DIR}/bin
 )
