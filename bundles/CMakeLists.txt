@@ -76,7 +76,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE core)
 if (BUILD_TESTS)
     include(CTest)
     enable_testing()
-    add_subdirectory(test)
 endif (BUILD_TESTS)
 
 if (GEN_DOCS)

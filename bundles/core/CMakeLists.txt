@@ -4,7 +4,7 @@ set(${_bundle_name})
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE ${_bundle_name}BundleDir="${CMAKE_CURRENT_BINARY_DIR}/" ${_bundle_name}BundleFile="${_bundle_name}.dll")
 
-file(GLOB_RECURSE CODE_FILES *.cpp *.h)
+file(GLOB CODE_FILES *.cpp *.h)
 
 # Set up dependencies to resources to track changes
 usFunctionGetResourceSource(TARGET ${_bundle_name} OUT _SRCS)
@@ -12,6 +12,9 @@ usFunctionGetResourceSource(TARGET ${_bundle_name} OUT _SRCS)
 usFunctionGenerateBundleInit(TARGET ${_bundle_name} OUT _SRCS)
 
 add_library(${_bundle_name} ${CODE_FILES} ${_SRCS})
+include(GenerateExportHeader)
+generate_export_header(${_bundle_name})
+target_include_directories(${_bundle_name} PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 
 set_target_properties(${_bundle_name} PROPERTIES
   # This is required for every bundle
@@ -38,8 +41,16 @@ usFunctionEmbedResources(TARGET ${_bundle_name}
 target_link_libraries(${_bundle_name} CppMicroServices)
 target_include_directories(${_bundle_name} PRIVATE CppMicroServices)
 
+target_include_directories(${_bundle_name} INTERFACE 
+    "${CMAKE_SOURCE_DIR}/${_bundle_name}"
+)
+
 install(TARGETS ${_bundle_name}
     ARCHIVE DESTINATION ${CMAKE_BINARY_DIR}/lib
     LIBRARY DESTINATION ${CMAKE_BINARY_DIR}/lib
     RUNTIME DESTINATION ${CMAKE_BINARY_DIR}/bin
 )
+
+if(BUILD_TESTS)
+	add_subdirectory(test)
+endif()
