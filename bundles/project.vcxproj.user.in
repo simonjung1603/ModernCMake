@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?> 
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-		<LocalDebuggerEnvironment>PATH=${CMAKE_BINARY_DIR}/../cppmicroservices-prefix/src/cppmicroservices-build/bin/Debug;%PATH%</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=${CMAKE_BINARY_DIR}/bin;${CMAKE_BINARY_DIR}/../cppmicroservices-prefix/src/cppmicroservices-build/bin/Debug;%PATH%</LocalDebuggerEnvironment>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-		<LocalDebuggerEnvironment>PATH=${CMAKE_BINARY_DIR}/../cppmicroservices-prefix/src/cppmicroservices-build/bin/Release;%PATH%</LocalDebuggerEnvironment>
+		<LocalDebuggerEnvironment>PATH=${CMAKE_BINARY_DIR}/bin${CMAKE_BINARY_DIR}/../cppmicroservices-prefix/src/cppmicroservices-build/bin/Release;%PATH%</LocalDebuggerEnvironment>
 	</PropertyGroup>
 </Project>
