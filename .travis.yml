@@ -51,7 +51,7 @@ matrix:
             - lcov
       before_script:
         - mkdir -p build && cd build
-        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTS=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ..
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ..
       script:
         - cmake --build . -- -j2
         - cmake --build . --target coverage
@@ -101,7 +101,7 @@ before_install:
 
 before_script:
   - mkdir -p build && cd build
-  - cmake -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_COMPILER=$COMPILER -DBUILD_TESTS=ON -DGEN_DOCS=OFF ..
+  - cmake -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_CXX_COMPILER=$COMPILER -DBUILD_TESTING=ON -DGEN_DOCS=OFF ..
 
 script:
   - cmake --build . # Build the code

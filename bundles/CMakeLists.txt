@@ -12,7 +12,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Options
-option(BUILD_TESTS "Build test executable" ON)
+include(CTest)
+#option(BUILD_TESTS "Build test executable" ON)
 option(GEN_DOCS "Generate documentation" OFF)
 option(ENABLE_COVERAGE "Enable code coverage" OFF)
 
@@ -24,9 +25,9 @@ if (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif (NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 
 if (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
-    if (NOT BUILD_TESTS)
+    if (NOT BUILD_TESTING)
         message(FATAL_ERROR "Tests must be enabled for code coverage!")
-    endif (NOT BUILD_TESTS)
+    endif (NOT BUILD_TESTING)
     
     include(CodeCoverage)
     
@@ -72,11 +73,6 @@ endforeach()
 #todo remove
 target_include_directories(${PROJECT_NAME} PRIVATE core)
 target_link_libraries(${PROJECT_NAME} PRIVATE core)
-
-if (BUILD_TESTS)
-    include(CTest)
-    enable_testing()
-endif ()
 
 if (GEN_DOCS)
     add_subdirectory(doc)
