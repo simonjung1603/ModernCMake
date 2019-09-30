@@ -54,7 +54,7 @@ matrix:
         - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ..
       script:
         - cmake --build . -- -j2
-        - cmake --build . --target coverage
+        # fix coverage - cmake --build . --target coverage
       after_success:
         - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
       if: branch != coverity_scan
