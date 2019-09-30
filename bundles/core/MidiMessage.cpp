@@ -23,6 +23,6 @@ unsigned char mb::MidiMessage::GetThirdByte() const
 mb::MidiMessage::operator bool() const
 {
     if (this->GetType() == mb::EVENT_TYPE::UNINITIALIZED) return false;
-    if (this->GetChannel() < 0x0 || this->GetChannel() > 0xF) return false;
+    if (this->GetChannel() > 0xF) return false;
     return true;
 }
