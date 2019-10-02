@@ -1,11 +1,11 @@
-#ifdef _WIN64
+#ifdef _WIN32
 #pragma warning( push )
 #pragma warning( disable : 4251 )
 #endif
 #include <cppmicroservices/Framework.h>
 #include <cppmicroservices/FrameworkFactory.h>
 #include <cppmicroservices/BundleContext.h>
-#ifdef _WIN64
+#ifdef _WIN32
 #pragma warning( pop )
 #endif
 
