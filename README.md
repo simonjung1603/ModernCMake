@@ -2,7 +2,8 @@
 
 [![Travis Build Status](https://travis-ci.org/simonjung1603/ModernCMake.svg?branch=master)](https://travis-ci.org/simonjung1603/ModernCMake)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/19178/badge.svg)](https://scan.coverity.com/projects/simonjung1603-moderncmake)
-
+[![codecov](https://codecov.io/gh/simonjung1603/ModernCMake/branch/master/graph/badge.svg)](https://codecov.io/gh/simonjung1603/ModernCMake)
+[![Appveyor Build status](https://ci.appveyor.com/api/projects/status/kngp2ggjgnhxbfgr?svg=true)](https://ci.appveyor.com/project/simonjung1603/moderncmake)
 
 A simple, cross-platform, and continuously integrated C++14 project template.
 
