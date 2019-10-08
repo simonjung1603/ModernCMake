@@ -55,7 +55,7 @@ matrix:
         - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 ..
         - cmake --build . -- -j2
         - cd MidiBuddyBuild
-        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ../../bundles
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ../../bundles
       script:
         - cmake --build . -- -j2
         - cmake --build . --target coverage
