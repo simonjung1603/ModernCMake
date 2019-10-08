@@ -51,7 +51,10 @@ matrix:
             - lcov
       before_script:
         - mkdir -p build && cd build
-        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ..
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 ..
+        - cd MidiBuddyBuild
+        - cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++-5 -DBUILD_TESTING=ON -DENABLE_COVERAGE=ON -DGEN_DOCS=OFF ../../bundles
+        - cd ..
       script:
         - cmake --build . -- -j2
         - cd MidiBuddyBuild
