@@ -27,5 +27,6 @@ before_build:
 
 build_script:
   - cmake --build . --config %CONFIGURATION% -- %MSBUILD_ARGS% # Build the code
+  - cd MidiBuddyBuild
   - ctest -C %CONFIGURATION% # Run tests
   - cmake --build . --config %CONFIGURATION% --target INSTALL -- %MSBUILD_ARGS% # Install the necessary files
