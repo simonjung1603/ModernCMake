@@ -13,6 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Options
 include(CTest)
+enable_testing()
 #option(BUILD_TESTS "Build test executable" ON)
 option(GEN_DOCS "Generate documentation" OFF)
 option(ENABLE_COVERAGE "Enable code coverage" OFF)
