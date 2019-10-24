@@ -13,4 +13,4 @@ target_link_libraries(test_runner core doctest)
 
 add_test(${TEST_NAME} test_runner)
 
-set_tests_properties(${TEST_NAME} PROPERTIES ENVIRONMENT "PATH=%{CMAKE_BINARY_DIR}/bin;$ENV{PATH}")
+set_tests_properties(${TEST_NAME} PROPERTIES ENVIRONMENT "PATH=${CMAKE_BINARY_DIR}/bin;$ENV{PATH}")
