@@ -49,7 +49,8 @@ matrix:
             - g++-5
             - cmake
             - lcov
-            - alsa-lib
+            - alsa-base
+            - alsa-utils
       before_script:
       # maybe remove automatic build step of MidiBuddy in superbuild
         - mkdir -p build && cd build
