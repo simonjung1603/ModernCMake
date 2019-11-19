@@ -1,0 +1,6 @@
+{
+  "bundle.symbolic_name" : "midi",
+  "bundle.activator" : true,
+  "bundle.name" : "Midi Buddy Midi Bundle",
+  "bundle.description" : "The bundle containing all midi microservices"
+}
