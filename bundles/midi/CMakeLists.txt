@@ -53,6 +53,6 @@ install(TARGETS ${_bundle_name}
     RUNTIME DESTINATION ${CMAKE_BINARY_DIR}/bin
 )
 
-if(BUILD_TESTS)
+if(BUILD_TESTING)
 	#add_subdirectory(test)
 endif()
