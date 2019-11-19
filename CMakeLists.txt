@@ -22,7 +22,7 @@ ExternalProject_Add(${proj}
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
   )
-add_dependencies(${proj} cppmicroservices)
+add_dependencies(${proj} cppmicroservices rtmidi)
 
 
 #build MidiBuddy
