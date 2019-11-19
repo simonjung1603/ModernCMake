@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.10)
 set(proj MidiBuddyConfigure)
 project(${proj})
 
+set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/MidiBuddyBuild")
+
 #externals
 include(ExternalProject)
 file(GLOB EXTERNAL_PROJECTS cmake/externals/*.cmake)
