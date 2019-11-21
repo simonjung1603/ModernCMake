@@ -14,11 +14,11 @@ foreach(external ${EXTERNAL_PROJECTS})
 	include(${external})
 endforeach()
 
-
 ExternalProject_Add(${proj}
   DOWNLOAD_COMMAND ""
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bundles
   BINARY_DIR ${CMAKE_BINARY_DIR}/MidiBuddyBuild
+  CMAKE_ARGS "-DCMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}"
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
   )
