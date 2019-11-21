@@ -4,3 +4,6 @@ ExternalProject_Add(cppmicroservices
 	INSTALL_DIR "${CMAKE_INSTALL_PREFIX}"
 	GIT_TAG development
 )
+
+ExternalProject_Get_Property(cppmicroservices binary_dir)
+list(APPEND CMAKE_PREFIX_PATH ${binary_dir})

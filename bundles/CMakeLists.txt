@@ -59,7 +59,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 
 option(BUILD_SHARED_LIBS "Build shared libs" ON)
 
-find_package(CppMicroServices REQUIRED PATHS ${CMAKE_BINARY_DIR}/../cppmicroservices-prefix/src/cppmicroservices-build)
+find_package(CppMicroServices REQUIRED)
 #target_include_directories(${PROJECT_NAME} PRIVATE CppMicroServices)
 
 #bundles

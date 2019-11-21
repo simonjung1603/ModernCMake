@@ -38,7 +38,7 @@ usFunctionEmbedResources(TARGET ${_bundle_name}
     manifest.json
   )
 
-find_package(rtmidi REQUIRED PATHS ${CMAKE_BINARY_DIR}/../rtmidi-prefix/src/rtmidi-build)
+find_package(rtmidi REQUIRED)
   
 target_link_libraries(${_bundle_name} CppMicroServices core RtMidi::rtmidi)
 target_include_directories(${_bundle_name} PRIVATE ${CMAKE_BINARY_DIR}/../rtmidi-prefix/src/rtmidi)
