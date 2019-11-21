@@ -51,6 +51,9 @@ matrix:
             - lcov
             - libjack-jackd2-dev
             - libjack-jackd2-0
+            - libasound2-dev
+            - libasound2
+            - libasound2-data
       before_script:
       # maybe remove automatic build step of MidiBuddy in superbuild
         - mkdir -p build && cd build
