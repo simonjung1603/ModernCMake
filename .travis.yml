@@ -50,6 +50,7 @@ matrix:
             - cmake
             - lcov
             - libjack-dev
+            - libjack-jackd2-0
             - libjack-jackd2-dev
             - libbio2jack0-dev
             - libbjack-ocaml-dev
