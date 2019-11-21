@@ -49,8 +49,10 @@ matrix:
             - g++-5
             - cmake
             - lcov
-            - jackd
-            - qjackctl
+            - libjack-dev
+            - libjack-jackd2-dev
+            - libbio2jack0-dev
+            - libbjack-ocaml-dev
       before_script:
       # maybe remove automatic build step of MidiBuddy in superbuild
         - mkdir -p build && cd build
