@@ -5,6 +5,7 @@ set(proj MidiBuddyConfigure)
 project(${proj})
 
 set(CMAKE_INSTALL_PREFIX "${CMAKE_BINARY_DIR}/MidiBuddyBuild")
+set(external_cmake_arguments)
 
 #externals
 include(ExternalProject)
@@ -18,7 +19,7 @@ ExternalProject_Add(${proj}
   DOWNLOAD_COMMAND ""
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bundles
   BINARY_DIR ${CMAKE_BINARY_DIR}/MidiBuddyBuild
-  CMAKE_ARGS "-DCMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}"
+  CMAKE_ARGS "${external_cmake_arguments}"
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
   )

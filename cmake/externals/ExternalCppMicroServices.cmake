@@ -6,4 +6,4 @@ ExternalProject_Add(cppmicroservices
 )
 
 ExternalProject_Get_Property(cppmicroservices binary_dir)
-list(APPEND CMAKE_PREFIX_PATH ${binary_dir})
+list(APPEND external_cmake_arguments "-Dcppmicroservices_DIR=${binary_dir}")

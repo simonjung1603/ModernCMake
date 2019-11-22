@@ -5,4 +5,4 @@ ExternalProject_Add(rtmidi
 )
 
 ExternalProject_Get_Property(rtmidi binary_dir)
-list(APPEND CMAKE_PREFIX_PATH ${binary_dir})
+list(APPEND external_cmake_arguments "-Drtmidi_DIR=${binary_dir}")
