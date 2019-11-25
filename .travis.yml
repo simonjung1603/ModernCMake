@@ -115,5 +115,5 @@ before_script:
 script:
   - cmake --build . # Build the code
   - cd MidiBuddyBuild
-  - ctest --output-on-failure -VV
   - cmake --build . --target install # Install the necessary files
+  - ctest --output-on-failure -VV
