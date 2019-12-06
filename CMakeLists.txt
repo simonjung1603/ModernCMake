@@ -16,7 +16,7 @@ foreach(external ${EXTERNAL_PROJECTS})
 endforeach()
 
 ExternalProject_Add(${proj}
-  DOWNLOAD_COMMAND ""
+  DOWNLOAD_COMMAND "echo ${external_cmake_arguments}"
   SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/bundles
   BINARY_DIR ${CMAKE_BINARY_DIR}/MidiBuddyBuild
   CMAKE_ARGS "${external_cmake_arguments}"
